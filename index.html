@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator_Project-&-Git</title>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+<body>
+    <main id="container">
+        <h1 style="text-align: center;text-decoration: underline;"><span style="color: red; font-size: 30px;">&hearts;</span>JavaScript
+            Calculator<span style="color: red; font-size: 30px;">&hearts;</span></h1>
+        <!--To enter first Operand-->
+        <section id="part_one">
+            <h2>Enter the 1<sup>st</sup> Operand</h2>
+            <input type="number" name="firstNumber" class="inputBox" value="1" id="firstOperand">
+            <select name="firstNumber_selected" id="choice1">
+                <option value="number">number</option>
+                <option value="string">string</option>
+            </select>
+    
+
+        </section>
+
+        <!-- To choose an Operator-->
+        <section id="part_two">
+            <h2>Choose an Operator</h2>
+            <h3>Arithmetic Operators</h3>
+            <label for="plus"><input checked="checked" type="radio" name="operator" value="+" id="plus">+&nbsp;</label>
+            <label for="minus"><input type="radio" name="operator" value="-" id="minus">-&nbsp;</label>
+            <label for="multiply"><input type="radio" name="operator" value="*" id="multiply">x&nbsp;</label>
+            <label for="divide"><input type="radio" name="operator" value="/" id="divide">/&nbsp;</label>
+            <label for="modulus"><input type="radio" name="operator" value="%" id="modulus">%&nbsp;</label>
+            <h3>String Operators</h3>
+            <label for="concatinate"><input type="radio" name="operator" value="concat" id="concatinate">+ (concatinate)</label>
+
+            <h3>Comparision Operators</h3>
+            <label for="equal"><input type="radio" name="operator" value="==" id="equal">==&nbsp;</label>
+            <label for="strict_equal"><input type="radio" name="operator" value="===" id="strict_equal">===&nbsp;</label>
+            <label for="unequal"><input type="radio" name="operator" value="!=" id="unequal">!=&nbsp;</label>
+            <label for="strict_unequal"><input type="radio" name="operator" value="!==" id="strict_unequal">!==&nbsp;</label>
+            <label for="lessThan"><input type="radio" name="operator" value=">" id="lessThan">&lt;&nbsp;</label>
+            <label for="lessThan_or_equal"><input type="radio" name="operator" value=">=" id="lessThan_or_equal">&lt;=&nbsp;</label>
+            <label for="greaterThan"><input type="radio" name="operator" value="<" id="greaterThan">&gt;&nbsp;</label>
+            <label for="greaterThan_or_equal"><input type="radio" name="operator" value="<=" id="greaterThan_or_equal">&gt;=&nbsp;</label>
+        </section>
+
+        <!--To enter the second Operand-->
+        <section id="part_three">
+            <h2>Enter the 2<sup>nd</sup> Operand</h2>
+            <input type="number" name="secondNumber" class="inputBox" value="1" id="secondOperand">
+            <select name="secondNumber_selected" id="choice2">
+                <option value="number">number</option>
+                <option value="string">string</option>
+            </select>
+        </section>
+
+        <!--This shows Operate Button-->
+        <section id="part_four">
+            <h2>Click the Button</h2>
+            <input onclick="doTheMath();" type="button" value="Operate!">
+        </section>
+
+        <!--Show output here-->
+        <section id="part_five">
+            <h2>Output Section</h2>
+            <h3>Operation</h3>
+            <div id="displayOperation"></div>
+            <h3>Results</h3>
+            <div id="displayResults"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Mark Eugene's Super Calculator_Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
